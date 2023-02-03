@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#ECD5BB"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beauty of Bangladesh"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:fontFamily="verdana"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:src="@drawable/cover"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="When a mother and her children first arrive, we check that their circumstances meet our admission criteria, and if necessary our social workers visit their village or relatives to ensure that they are truly in need. Once the family has been accepted, they spend a week or so in our clinic so that any illnesses or contagious skin problems such as scabies are diagnosed and cleared. \nImmediately on admission, the mother meets with our occupational therapists and sets up an agreed rehabilitation plan, centred around where she wants to live when she leaves Sreepur Village and what she would like to do to earn a living, such as agriculture, tailoring, etc. This plan sets out the sections where the mother will work during her time with us, and the literacy, numeracy and hygiene training that she will receive."
+                android:justificationMode="inter_word"
+                android:lineHeight="20dp"
+                android:fontFamily="verdana"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:src="@drawable/cover"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="When a mother and her children first arrive, we check that their circumstances meet our admission criteria, and if necessary our social workers visit their village or relatives to ensure that they are truly in need. Once the family has been accepted, they spend a week or so in our clinic so that any illnesses or contagious skin problems such as scabies are diagnosed and cleared. \nImmediately on admission, the mother meets with our occupational therapists and sets up an agreed rehabilitation plan, centred around where she wants to live when she leaves Sreepur Village and what she would like to do to earn a living, such as agriculture, tailoring, etc. This plan sets out the sections where the mother will work during her time with us, and the literacy, numeracy and hygiene training that she will receive."
+                android:justificationMode="inter_word"
+                android:lineHeight="20dp"
+                android:fontFamily="verdana"
+                android:textSize="18dp"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is a Button"
+                android:layout_marginBottom="50dp"
+                android:backgroundTint="#00FF00"
+                android:textColor="@color/black"
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
