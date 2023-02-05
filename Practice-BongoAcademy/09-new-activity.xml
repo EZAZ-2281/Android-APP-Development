@@ -1,0 +1,118 @@
+xml: 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#ebe5d0">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cover"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible"/>
+    <Button
+        android:id="@+id/showbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:backgroundTint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <Button
+        android:id="@+id/goawaybutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GO Away"
+        android:backgroundTint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/toastbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Toast"
+        android:backgroundTint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/nextpage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Next Page"
+        android:backgroundTint="@color/black"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
+
+java: 
+package com.example.myapplication;
+
+import static com.example.myapplication.R.id.toastbutton;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    ImageView image;
+    Button showbutton, goawaybutton, toastbutton, nextpage;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        image = findViewById(R.id.image);
+        showbutton = findViewById(R.id.showbutton);
+        goawaybutton = findViewById(R.id.goawaybutton);
+        toastbutton = findViewById(R.id.toastbutton);
+        nextpage = findViewById(R.id.nextpage);
+
+        showbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                image.setVisibility(View.VISIBLE);
+            }
+        });
+        goawaybutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                image.setVisibility(View.GONE);
+            }
+        });
+        toastbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Hi I am Toast", Toast.LENGTH_LONG).show();
+            }
+        });
+        nextpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(myIntent);
+            }
+        });
+    }
+}
